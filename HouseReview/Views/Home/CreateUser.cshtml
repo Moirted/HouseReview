@@ -1,0 +1,30 @@
+﻿@model HouseReview.Models.CreateUser
+@{
+    ViewData["Title"] = "Создание пользователя";
+}
+<div class="card col-md-12">
+    <form asp-action="CreateUser" asp-controller="Home" method="post">
+        <div asp-validation-summary="All" style="font-size:23px; font-family:Impact" class="text-danger text-center"></div>
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" asp-for="Name" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" asp-for="Email" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" asp-for="Password" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PasswordConfrim</label>
+            <input type="password" asp-for="PasswordConfrim" class="form-control" />
+        </div>
+        <div>
+            <button class="btn btn-primary float-right" type="submit">Отправить</button>
+        </div>
+        
+    </form>
+</div>
