@@ -7,29 +7,29 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="~/css/raiting.css" >
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/js/bootstrap.min.js" />
 </head>
 <body>
     <h2 class="text-center">Выберете объект</h2>
 <div class="container my-3">
   <div class="row row-cols-auto">
-    <div class="col-7 ">
+    <div class="col-auto ">
         <div id="map" style="width: 600px; height: 400px"></div>
+        <button type="button" class="btn btn-success my-3" onclick="adrOut()">Проверить адрес</button>
     </div>
-    <div class="col-5 ">
+     <div class="col-4">
        <button type="button" class="btn btn-primary btn-lg my-3 mx-3">Yandex</button>
        <button type="button" class="btn btn-primary btn-lg my-3 mx-3">Booking</button>
        <button type="button" class="btn btn-primary btn-lg my-3 mx-3">Domofond</button>
-       <button  type="button" class="btn btn-primary btn-lg my-3 mx-3">ABOBA</button>
-    </div>
+       <button  type="button" class="btn btn-primary btn-lg my-3 mx-3">ABA</button>
+     </div>
   </div>
 </div>
 <div class="container">
     <div class ="row">
-     <div class="form-group" align="right">
-            <label for="exampleFormControlTextarea1">Leave ur comment:</label>
-            <div class="rating-area">
+     <div class="form-group" align="left">
+            <label id="out" for="exampleFormControlTextarea1">Leave ur comment for:</label>
+            <div class="rating-area" align = "left">
 	            <input type="radio" id="star-5" name="rating" value="5">
 	            <label for="star-5" title="Оценка «5»"></label>	
 	            <input type="radio" id="star-4" name="rating" value="4">
@@ -42,14 +42,13 @@
 	            <label for="star-1" title="Оценка «1»"></label>
            </div>
       </div>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              <input class="btn btn-primary" type="submit" value="Submit">
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ></textarea>
+              <input class="btn btn-primary my-3" type="submit" value="Опубликовать">
       </div>
-      <div class = "row">
-         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">What other people think:</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
+      <div>
+         
+          <label for="exampleFormControlTextarea1" class="form-label">Комментарии других пользователей:</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
     </div>
 </div>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=50bb418f-9bea-4e20-8e47-45a5f8f27722&lang=ru_RU" type="text/javascript"></script>
