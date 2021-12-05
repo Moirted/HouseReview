@@ -15,20 +15,20 @@
   <div class="row row-cols-auto">
     <div class="col-auto ">
         <div id="map" style="width: 600px; height: 400px"></div>
-        <button type="button" class="btn btn-success my-3" onclick="adrOut()">Проверить адрес</button>
+        <button type="button" class="btn btn-success my-3">Проверить адрес</button>
     </div>
      <div class="col-4">
        <button type="button" class="btn btn-primary btn-lg my-3 mx-3">Yandex</button>
        <button type="button" class="btn btn-primary btn-lg my-3 mx-3">Booking</button>
        <button type="button" class="btn btn-primary btn-lg my-3 mx-3">Domofond</button>
-       <button  type="button" class="btn btn-primary btn-lg my-3 mx-3">ABA</button>
+       <button  type="button" class="btn btn-primary btn-lg my-3 mx-3">Other</button>
      </div>
   </div>
 </div>
 <div class="container">
     <div class ="row">
      <div class="form-group" align="left">
-            <label id="out" for="exampleFormControlTextarea1">Leave ur comment for:</label>
+            <label id="out" for="exampleFormControlTextarea1">Оставьте комментарий и оценку:</label>
             <div class="rating-area" align = "left">
 	            <input type="radio" id="star-5" name="rating" value="5">
 	            <label for="star-5" title="Оценка «5»"></label>	
@@ -45,12 +45,14 @@
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ></textarea>
               <input class="btn btn-primary my-3" type="submit" value="Опубликовать">
       </div>
-      <div>
-         
-          <label for="exampleFormControlTextarea1" class="form-label">Комментарии других пользователей:</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
     </div>
-</div>
+      
+          <div class ="row">
+          <label for="exampleFormControlTextarea1" class="form-label">Комментарии других пользователей:</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+    
+
     <script src="https://api-maps.yandex.ru/2.1/?apikey=50bb418f-9bea-4e20-8e47-45a5f8f27722&lang=ru_RU" type="text/javascript"></script>
     <script src="~/js/script.js" type="text/javascript"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
