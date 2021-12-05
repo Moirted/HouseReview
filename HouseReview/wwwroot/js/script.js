@@ -1,5 +1,5 @@
-﻿ymaps.ready(init);
-
+﻿//var json;
+ymaps.ready(init);
 function init() {
     var myPlacemark,
         myMap = new ymaps.Map('map', {
@@ -12,7 +12,6 @@ function init() {
     // Слушаем клик на карте.
     myMap.events.add('click', function (e) {
         var coords = e.get('coords');
-
         // Если метка уже создана – просто передвигаем ее.
         if (myPlacemark) {
             myPlacemark.geometry.setCoordinates(coords);
@@ -26,7 +25,8 @@ function init() {
                 getAddress(myPlacemark.geometry.getCoordinates());
             });
         }
-        getAddress(coords);
+        
+       getAddress(coords);
     });
 
     // Создание метки.
@@ -59,4 +59,13 @@ function init() {
                 });
         });
     }
+
+    
 }
+/*function adrOut() {
+    var p = document.getElementById('out');
+    if (json != null) {
+        p.innerHTML += json;
+    }
+    else alert("Выбрете адресс или введите вручную");
+}*/
