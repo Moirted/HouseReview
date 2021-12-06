@@ -1,6 +1,3 @@
-// ——————————————————————————————————————————————————
-// Помехи
-// ——————————————————————————————————————————————————
 class TextScramble {
 	constructor(el) {
 		this.el = el
@@ -54,9 +51,6 @@ class TextScramble {
 		return this.chars[Math.floor(Math.random() * this.chars.length)]
 	}
 }
-// ——————————————————————————————————————————————————
-// Фразы
-// ——————————————————————————————————————————————————
 const phrases = [
 	'Отзывы',
 	'Дополнительная информация',
@@ -69,7 +63,7 @@ const fx = new TextScramble(el)
 let counter = 0
 const next = () => {
 	fx.setText(phrases[counter]).then(() => {
-		setTimeout(next, 3000)
+		setTimeout(next, 5000)
 	})
 	counter = (counter + 1) % phrases.length
 }
