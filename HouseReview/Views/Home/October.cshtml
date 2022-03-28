@@ -1,0 +1,128 @@
+﻿<!doctype html>
+
+<html>
+<head>
+    <title>HouseRivew</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="~/css/raiting.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/js/bootstrap.min.js" />
+</head>
+<body>
+    <h2 class="text-center">Карта районов</h2>
+    <div class="row">
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="Soviet">
+                    <img src="~/img/Soviet.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="Soviet">Советский</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="Voroshil">
+                    <img src="~/img/Voroshil.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="Voroshil">Ворошиловский</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="Railw">
+                    <img src="~/img/railw.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="Railw">Железнодорожный</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="Kirov">
+                    <img src="~/img/Kirov.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="Kirov">Кировский</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="Lenin">
+                    <img src="~/img/Lenin.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="Lenin">Ленинский</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="October">
+                    <img src="~/img/October_pressed.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="October">Октябрьский</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="Prolet">
+                    <img src="~/img/Prolet.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="Prolet">Пролетарский</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="Firstm">
+                    <img src="~/img/Firstm.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="Firstm">Первомайский</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="form-group" align="left">
+                <label id="out" for="exampleFormControlTextarea1">Оставьте комментарий и оценку:</label>
+                <div class="rating-area" align="left">
+                    <input type="radio" id="star-5" name="rating" value="5">
+                    <label for="star-5" title="Оценка «5»"></label>
+                    <input type="radio" id="star-4" name="rating" value="4">
+                    <label for="star-4" title="Оценка «4»"></label>
+                    <input type="radio" id="star-3" name="rating" value="3">
+                    <label for="star-3" title="Оценка «3»"></label>
+                    <input type="radio" id="star-2" name="rating" value="2">
+                    <label for="star-2" title="Оценка «2»"></label>
+                    <input type="radio" id="star-1" name="rating" value="1">
+                    <label for="star-1" title="Оценка «1»"></label>
+                </div>
+            </div>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <input class="btn btn-primary my-3" type="submit" value="Опубликовать">
+        </div>
+    </div>
+    <div>
+        <label for="exampleFormControlTextarea1" class="form-label">Комментарии других пользователей:</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
