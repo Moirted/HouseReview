@@ -1,7 +1,108 @@
-﻿
-@{
-    ViewData["Title"] = "Regions";
-}
+﻿<!doctype html>
 
-<h1>Данный раздел находится в разработке</h1>
-
+<html>
+<head>
+    <title>HouseRivew</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="~/css/raiting.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/js/bootstrap.min.js" />
+</head>
+<body>
+    <div class="cover-container d-flex w-100 h-100 p-5 mx-auto flex-column">
+        <main class="px-3">
+            <h1 class="text-center">Карта Районов</h1>
+            <p class="lead text-center"></p>
+        </main>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="Soviet">
+                    <img src="~/img/Soviet.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="Soviet">Советский</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="Voroshil">
+                    <img src="~/img/Voroshil.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="Voroshil">Ворошиловский</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="Railw">
+                    <img src="~/img/railw.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="Railw">Железнодорожный</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="Kirov">
+                    <img src="~/img/Kirov.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="Kirov">Кировский</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="Lenin">
+                    <img src="~/img/Lenin.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="Lenin">Ленинский</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="October">
+                    <img src="~/img/October.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="October">Октябрьский</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="Prolet">
+                    <img src="~/img/Prolet.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="Prolet">Пролетарский</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="thumbnail">
+                <a class="nav-item" asp-controller="Home" asp-action="Firstm">
+                    <img src="~/img/Firstm.jpg" class="img-thumbnail" alt="Lights" style="width:100%">
+                    <div>
+                        <a class="text-sm-center nav-link" asp-controller="Home" asp-action="Firstm">Первомайский</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

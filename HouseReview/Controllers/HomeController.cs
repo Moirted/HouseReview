@@ -1,7 +1,4 @@
-﻿using HouseReview.Models;
-using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-
+﻿using Microsoft.AspNetCore.Mvc;
 namespace HouseReview.Controllers
 {
     public class HomeController:Controller
@@ -16,17 +13,49 @@ namespace HouseReview.Controllers
             return View();
         }
 
+        public IActionResult Regions()
+        {
+            return View();
+        }
 
-        [HttpGet]
-        public IActionResult CreateUser() => View();
+        public IActionResult Firstm()
+        {
+            return View();
+        }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateUser(CreateUser model) {
-            if (ModelState.IsValid)
-            {
-                return RedirectToAction("Index");
-            }
-            else return View();
+        public IActionResult Kirov()
+        {
+            return View();
+        }
+
+        public IActionResult Lenin()
+        {
+            return View();
+        }
+
+        public IActionResult October()
+        {
+            return View();
+        }
+
+        public IActionResult Railw()
+        {
+            return View();
+        }
+
+        public IActionResult Soviet()
+        {
+            return View();
+        }
+
+        public IActionResult Voroshil()
+        {
+            return View();
+        }
+
+        public IActionResult Prolet()
+        {
+            return View();
         }
     }
 }
