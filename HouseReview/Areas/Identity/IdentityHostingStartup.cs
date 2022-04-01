@@ -20,7 +20,7 @@ namespace HouseReview.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("AuthDBContextConnection")));
 
-                services.AddDefaultIdentity<HouseReviewUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                services.AddDefaultIdentity<HouseReviewUser>(options => options.SignIn.RequireConfirmedAccount = false)
                     .AddEntityFrameworkStores<AuthDBContext>();
             });
         }
