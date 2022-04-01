@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using HouseReview.Models;
-using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HouseReview.Controllers
 {
+    [Authorize]
     public class HomeController:Controller
     {
 		//[HttpGet]
@@ -17,7 +18,6 @@ namespace HouseReview.Controllers
   //          }
   //          else return View();
 		//}
-		
         public IActionResult Index()
         {
             return View();
