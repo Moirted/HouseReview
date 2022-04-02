@@ -53,9 +53,9 @@ class TextScramble {
 }
 const phrases = [
 	'Отзывы',
-	'Дополнительная информация',
-	'Поиск квартиры на Авито', 
-	'Поиск квартиры на Domofond',
+	'Доп. информация',
+	'Поиск на Авито', 
+	'Поиск на Domofond',
 	'Выписка из ЕГРН',
 ]
 const el = document.querySelector('.scramble-text')
