@@ -9,6 +9,7 @@ namespace HouseReview.Models
     {
         public int Id { get; set; }
 
+        [Display(Name = "Имя")]
         public string UserName { get; set; }
 
         [Display(Name = "Адрес")]
@@ -18,7 +19,6 @@ namespace HouseReview.Models
         [Display(Name = "Комментарий")]
         [Required]
         public string Text { get; set; }
-
 
         [Display(Name = "Дата создания")]
         public DateTime CreationTime { get; set; } = DateTime.Now;
