@@ -107,11 +107,59 @@ namespace HouseReview.Controllers
             return Redirect(url);
         }
 
+
+        public IActionResult RentHouse()
+        {
+            string url = "https://realty.yandex.ru/rostov-na-donu/snyat/dom/?unifiedAddress=" + manageAdr(HROptions.adress);
+            return Redirect(url);
+        }
+
+        public IActionResult BuyHouse()
+        {
+            string url = "https://realty.yandex.ru/rostov-na-donu/kupit/dom/?unifiedAddress=" + manageAdr(HROptions.adress);
+            return Redirect(url);
+        }
+
+
+        public IActionResult RentFlat()
+        {
+            string url = "https://realty.yandex.ru/rostov-na-donu/snyat/kvartira/?unifiedAddress=" + manageAdr(HROptions.adress);
+            return Redirect(url);
+        }
+
+
+
+        public IActionResult BuyFlat()
+        {
+            string url = "https://realty.yandex.ru/rostov-na-donu/kupit/kvartira/?unifiedAddress=" + manageAdr(HROptions.adress);
+            return Redirect(url);
+        }
+
+
+
         public IActionResult InputCoords(MapChoice mp)
         {
             HROptions.coords = mp.coords;
             HROptions.adress = mp.adress;
             return Redirect("House");
+        }
+
+        public static string manageAdr(string adr) {
+            var arr = adr.Replace(", ",",").Split(",");
+            string kom = "%2C%20";
+            string sp = "%20";
+            string res = "";
+            for (int i = 0; i < arr.Length; i++) {
+                if (arr[i] == " ")
+                {
+                    res += sp;
+                }
+                else res += arr[i];
+                if (i != adr.Length - 1) {
+                    res += kom;
+                }
+            }
+            return res;
         }
     }
 }
