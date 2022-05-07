@@ -136,6 +136,8 @@ namespace HouseReview.Controllers
 
         public static string manageAdr(string adr)
         {
+            if (adr == null)
+                return "";
             var arr = adr.Replace(", ", ",").Split(",");
             string kom = "%2C%20";
             string sp = "%20";
