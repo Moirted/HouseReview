@@ -1,5 +1,7 @@
-﻿//var json;
+﻿
 ymaps.ready(init);
+var adr;
+var coordinates;
 function init() {
     var myPlacemark,
         myMap = new ymaps.Map('map', {
@@ -45,6 +47,10 @@ function init() {
         ymaps.geocode(coords).then(function (res) {
             var firstGeoObject = res.geoObjects.get(0);
 
+            adr = firstGeoObject.getAddressLine();
+            coordinates = coords;
+            SetPostbackValues();
+
             myPlacemark.properties
                 .set({
                     // Формируем строку с данными об объекте.
@@ -62,10 +68,10 @@ function init() {
 
     
 }
-/*function adrOut() {
-    var p = document.getElementById('out');
-    if (json != null) {
-        p.innerHTML += json;
-    }
-    else alert("Выбрете адресс или введите вручную");
-}*/
+function SetPostbackValues() {
+
+    document.getElementById("hiddenControl").value = adr;
+    document.getElementById("hiddenControl1").value = coordinates;
+    document.getElementById("hiddenControl2").value = adr;
+
+}

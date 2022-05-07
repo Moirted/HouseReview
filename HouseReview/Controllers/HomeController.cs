@@ -100,5 +100,18 @@ namespace HouseReview.Controllers
             IEnumerable<Comment> objList = _db.Comments.Where(x => (x.Adress == "Пролетарский"));
             return View(objList);
         }
+
+        public IActionResult Cadastr()
+        {
+            string url = "https://pkk.rosreestr.ru/#/search/" + HROptions.coords + "/17";
+            return Redirect(url);
+        }
+
+        public IActionResult InputCoords(MapChoice mp)
+        {
+            HROptions.coords = mp.coords;
+            HROptions.adress = mp.adress;
+            return Redirect("House");
+        }
     }
 }
