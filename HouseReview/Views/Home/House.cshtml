@@ -16,23 +16,20 @@
     <div class="container my-3">
         <div class="row row-cols-auto">
             <div class="col-auto">
-                <div id="map" style="width: 600px; height: 400px"></div>
+                <div id="map" style="width: 600px; height: 450px"></div>
             </div>
-            <div class="col-5">
-                <a asp-controller="Home" asp-action="BuyFlat" class="btn btn-primary btn-lg my-3 mx-3" target="_blank">Купить квартиру</a>
-                <a asp-controller="Home" asp-action="RentFlat" class="btn btn-primary btn-lg my-3 mx-3" target="_blank">Снять квартиру</a>
-                <a asp-controller="Home" asp-action="BuyHouse" class="btn btn-primary btn-lg my-3 mx-3" target="_blank">Купить дом</a>
-                <a asp-controller="Home" asp-action="RentHouse" class="btn btn-primary btn-lg my-3 mx-3" target="_blank">Снять дом</a>
-                <a asp-controller="Home" asp-action="Cadastr" class="btn btn-primary btn-lg my-3 mx-3" target="_blank">Кадастровая карта</a>
+            <div class="col">
+                <form asp-controller="Home" asp-action="InputCoords" method="post" target="_blank">
+                    <input id="hiddenControl" type="text" asp-for="adress" class="form-control mt-3" readonly />
+                    <input id="hiddenControl1" type="text" asp-for="coords" class="form-control mt-3 mb-3" readonly />
+                        <input type="submit" asp-for="adress" asp-controller="Home" asp-action="BuyFlat" value="    Купить квартиру    " class="btn btn-primary btn-lg my-2" />
+                        <input type="submit" asp-for="adress" asp-controller="Home" asp-action="RentFlat" value="Арендовать квартиру" class="btn btn-primary btn-lg my-2" />
+                        <input type="submit" asp-for="adress" asp-controller="Home" asp-action="BuyHouse" value="        Купить дом         " class="btn btn-primary btn-lg my-2" />
+                        <input type="submit" asp-for="adress" asp-controller="Home" asp-action="RentHouse" value="     Арендовать дом   " class="btn btn-primary btn-lg my-2" />
+                        <input type="submit" asp-for="coords" asp-controller="Home" asp-action="Cadastr" value="   Кадастровая карта  " class="btn btn-primary btn-lg my-2" />
+                </form>
             </div>
         </div>
-    </div>
-    <div class="col mt-3 mb-3">
-        <form asp-controller="Home" asp-action="InputCoords" method="post">
-            <input id="hiddenControl" type="text" asp-for="adress" class="form-control mt-3" readonly/>
-            <input id="hiddenControl1" type="text" asp-for="coords" class="form-control mt-3 mb-3" readonly/>
-            <input type="submit" value="Подтвердить" class="btn btn-primary" />
-        </form>
     </div>
 
      <div class="col">
@@ -47,7 +44,7 @@
              </div>
          </form>
          <form asp-controller="Comment" asp-action="Find">
-             <a>Введите адрес для поиска:</a>
+             <a>Введите адрес для поиска комментариев:</a>
              <div class="form-group">
                  <label for="Adress" class="control-label"></label>
                  <input name="Adress" id="hiddenControl2" class="form-control" />

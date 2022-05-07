@@ -91,38 +91,37 @@ namespace HouseReview.Controllers
             return View(objList);
         }
 
-        public IActionResult Cadastr()
+        public IActionResult Cadastr(string coords)
         {
-            string url = "https://pkk.rosreestr.ru/#/search/" + HROptions.coords + "/17";
+            string url = "https://pkk.rosreestr.ru/#/search/" + coords + "/17";
             return Redirect(url);
         }
 
 
-        public IActionResult RentHouse()
+        public IActionResult RentHouse(string adress)
         {
-            string url = "https://realty.yandex.ru/rostov-na-donu/snyat/dom/?unifiedAddress=" + manageAdr(HROptions.adress);
+            string url = "https://realty.yandex.ru/rostov-na-donu/snyat/dom/?unifiedAddress=" + manageAdr(adress);
             return Redirect(url);
         }
 
-        public IActionResult BuyHouse()
+        public IActionResult BuyHouse(string adress)
         {
-            string url = "https://realty.yandex.ru/rostov-na-donu/kupit/dom/?unifiedAddress=" + manageAdr(HROptions.adress);
-            return Redirect(url);
-        }
-
-
-        public IActionResult RentFlat()
-        {
-            string url = "https://realty.yandex.ru/rostov-na-donu/snyat/kvartira/?unifiedAddress=" + manageAdr(HROptions.adress);
+            string url = "https://realty.yandex.ru/rostov-na-donu/kupit/dom/?unifiedAddress=" + manageAdr(adress);
             return Redirect(url);
         }
 
 
-
-        public IActionResult BuyFlat()
+        public IActionResult RentFlat(string adress)
         {
-            string url = "https://realty.yandex.ru/rostov-na-donu/kupit/kvartira/?unifiedAddress=" + manageAdr(HROptions.adress);
+            string url = "https://realty.yandex.ru/rostov-na-donu/snyat/kvartira/?unifiedAddress=" + manageAdr(adress);
             return Redirect(url);
+        }
+
+        
+        public IActionResult BuyFlat(string adress)
+        {
+            string url = "https://realty.yandex.ru/rostov-na-donu/kupit/kvartira/?unifiedAddress=" + manageAdr(adress);
+            return Redirect(url); 
         }
 
 
