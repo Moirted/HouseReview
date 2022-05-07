@@ -73,5 +73,5 @@ function SetPostbackValues() {
     document.getElementById("hiddenControl").value = adr;
     document.getElementById("hiddenControl1").value = coordinates;
     document.getElementById("hiddenControl2").value = adr;
-
+    document.getElementById("hiddenControl3").value = adr;
 }

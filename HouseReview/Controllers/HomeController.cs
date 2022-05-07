@@ -134,36 +134,6 @@ namespace HouseReview.Controllers
             return Redirect("House");
         }
 
-<<<<<<< HEAD
-
-        public IActionResult RentHouse()
-        {
-            string url = "https://realty.yandex.ru/rostov-na-donu/snyat/dom/?unifiedAddress=" + manageAdr(HROptions.adress);
-            return Redirect(url);
-        }
-
-        public IActionResult BuyHouse()
-        {
-            string url = "https://realty.yandex.ru/rostov-na-donu/kupit/dom/?unifiedAddress=" + manageAdr(HROptions.adress);
-            return Redirect(url);
-        }
-
-
-        public IActionResult RentFlat()
-        {
-            string url = "https://realty.yandex.ru/rostov-na-donu/snyat/kvartira/?unifiedAddress=" + manageAdr(HROptions.adress);
-            return Redirect(url);
-        }
-
-
-
-        public IActionResult BuyFlat()
-        {
-            string url = "https://realty.yandex.ru/rostov-na-donu/kupit/kvartira/?unifiedAddress=" + manageAdr(HROptions.adress);
-            return Redirect(url);
-        }
-
-
         public static string manageAdr(string adr)
         {
             var arr = adr.Replace(", ", ",").Split(",");
@@ -172,25 +142,13 @@ namespace HouseReview.Controllers
             string res = "";
             for (int i = 0; i < arr.Length; i++)
             {
-=======
-        public static string manageAdr(string adr) {
-            var arr = adr.Replace(", ",",").Split(",");
-            string kom = "%2C%20";
-            string sp = "%20";
-            string res = "";
-            for (int i = 0; i < arr.Length; i++) {
->>>>>>> 55ba98b5d5c8450c5cff610ed77bdabcbce0da5d
                 if (arr[i] == " ")
                 {
                     res += sp;
                 }
                 else res += arr[i];
-<<<<<<< HEAD
                 if (i != adr.Length - 1)
                 {
-=======
-                if (i != adr.Length - 1) {
->>>>>>> 55ba98b5d5c8450c5cff610ed77bdabcbce0da5d
                     res += kom;
                 }
             }
