@@ -18,22 +18,25 @@ namespace HouseReview.Controllers
             IEnumerable<Comment> objList = _db.Comments;
             return View(objList);
         }
-        public IActionResult Create()
+
+        public IActionResult Create(string Adress)
         {
             return View();
         }
-        [HttpPost]
+
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Comment obj)
+        public IActionResult Create1(Comment obj)
         {
             _db.Comments.Add(obj);
             _db.SaveChanges();
             return RedirectToAction("Comment");
         }
+
         public IActionResult House()
         {
             return View();
         }
+
         public IActionResult FindAdr()
         {
             return View();
@@ -41,11 +44,16 @@ namespace HouseReview.Controllers
 
         public IActionResult Find(string Adress)
         {
-            IEnumerable<Comment> objList = _db.Comments.Where(x=>(x.Adress==Adress));
-            return View(objList);
+            if (Adress != null)
+            {
+                IEnumerable<Comment> objList = _db.Comments.Where(x => (x.Adress.Contains(Adress)));
+                return View(objList);
+            }
+            else
+            {
+                IEnumerable<Comment> objList = _db.Comments.Where(x => (x.Adress == Adress));
+                return View(objList);
+            }
         }
-
-
-
     }
 }

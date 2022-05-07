@@ -19,38 +19,52 @@
                 <div id="map" style="width: 600px; height: 400px"></div>
             </div>
             <div class="col-5">
+<<<<<<< HEAD
+                <a asp-controller="Home" asp-action="BuyFlat" class="btn btn-primary btn-lg my-3 mx-3" target="_blank">Купить квартиру</a>
+                <a asp-controller="Home" asp-action="RentFlat" class="btn btn-primary btn-lg my-3 mx-3" target="_blank">Снять квартиру</a>
+                <a asp-controller="Home" asp-action="BuyHouse" class="btn btn-primary btn-lg my-3 mx-3" target="_blank">Купить дом</a>
+                <a asp-controller="Home" asp-action="RentHouse" class="btn btn-primary btn-lg my-3 mx-3" target="_blank">Снять дом</a>
+                <a asp-controller="Home" asp-action="Cadastr" class="btn btn-primary btn-lg my-3 mx-3" target="_blank">Кадастровая карта</a>
+=======
                <a asp-controller="Home" asp-action="BuyFlat" class="btn btn-primary btn-lg my-3 mx-3" target="_blank">Купить квартиру</a>
                <a asp-controller="Home" asp-action="RentFlat" class="btn btn-primary btn-lg my-3 mx-3" target="_blank">Снять квартиру</a>
                <a asp-controller="Home" asp-action="BuyHouse" class="btn btn-primary btn-lg my-3 mx-3" target="_blank">Купить дом</a>
                <a asp-controller="Home" asp-action="RentHouse" class="btn btn-primary btn-lg my-3 mx-3" target="_blank">Снять дом</a>
                <a asp-controller="Home" asp-action="Cadastr" class="btn btn-primary btn-lg my-3 mx-3" target="_blank">Кадастровая карта</a>
+>>>>>>> 55ba98b5d5c8450c5cff610ed77bdabcbce0da5d
             </div>
         </div>
     </div>
 
      <form asp-controller="Home" asp-action = "InputCoords" method="post" >
-        <input id="hiddenControl" type ="text" asp-for="adress"  class="form-control"  />
-        <input id="hiddenControl1" type ="text" asp-for="coords"  class="form-control"   />
-        <input type="submit" value="Подтвердить" class="btn btn-primary" />
+        <input id="hiddenControl" type ="text" asp-for="adress"  class="form-control"/>
+        <input id="hiddenControl1" type ="text" asp-for="coords"  class="form-control"/>
+        <input type="submit" value="Подтвердить" class="btn btn-primary"/>
      </form>
 
 
-    <div class="col col-auto">
-        <div class="mt-3 mb-3">
-            <a asp-controller="Comment" asp-action="Create" class="btn btn-primary">Добавить комментарий</a>
-        </div>
-        <form asp-controller="Comment" asp-action="Find">
-
-            <p>Введите адрес для поиска:</p>
-            <div class="form-group">
-                <label for="Adress" class="control-label"></label>
-                <input name="Adress" id="hiddenControl2" class="form-control" />
-                <div class="mt-3 mb-lg-5">
-                    <input type="submit" value="Поиск" class="btn btn-primary" />
-                </div>
-            </div>
-        </form>
-    </div>
+     <div class="mt-3 mb-3">
+         <form asp-controller="Comment" asp-action="Create">
+             <p>Введите адрес для добавления комментария:</p>
+             <div class="form-group">
+                 <label for="Adress" class="control-label"></label>
+                 <input name="Adress" id="hiddenControl3" class="form-control" />
+                 <div class="mt-3 mb-lg-5">
+                     <input type="submit" value="Добавить комментарий" class="btn btn-primary" />
+                 </div>
+             </div>
+         </form>
+         <form asp-controller="Comment" asp-action="Find">
+             <p>Введите адрес для поиска:</p>
+             <div class="form-group">
+                 <label for="Adress" class="control-label"></label>
+                 <input name="Adress" id="hiddenControl2" class="form-control" />
+                 <div class="mt-3 mb-lg-5">
+                     <input type="submit" value="Поиск" class="btn btn-primary" />
+                 </div>
+             </div>
+         </form>
+     </div>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=50bb418f-9bea-4e20-8e47-45a5f8f27722&lang=ru_RU" type="text/javascript"></script>
     <script src="~/js/script.js" type="text/javascript"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
