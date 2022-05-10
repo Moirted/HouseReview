@@ -8,7 +8,6 @@ using System.Linq;
 
 namespace HouseReview.Controllers
 {
-    [Authorize]
     public class HomeController:Controller
     {
         private readonly CommentsDBContext _db;
