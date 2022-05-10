@@ -13,9 +13,31 @@ namespace HouseReview.Controllers
         {
             _db = db;
         }
-        public IActionResult Comment()
+        public IActionResult CommentRegions()
         {
-            IEnumerable<Comment> objList = _db.Comments;
+            IEnumerable<Comment> objList = _db.Comments.Where(x => (x.Adress == "Пролетарский" ||
+            x.Adress == "Кировский" ||
+            x.Adress == "Советский" ||
+            x.Adress == "Ворошиловский" ||
+            x.Adress == "Железнодорожный" ||
+            x.Adress == "Ленинский" ||
+            x.Adress == "Октябрьский" ||
+            x.Adress == "Первомайский"));
+            objList = objList.OrderByDescending(x => x.CreationTime);
+            return View(objList);
+        }
+
+        public IActionResult CommentHouses()
+        {
+            IEnumerable<Comment> objList = _db.Comments.Where(x => (x.Adress != "Пролетарский" &&
+            x.Adress != "Кировский" &&
+            x.Adress != "Советский" &&
+            x.Adress != "Ворошиловский" &&
+            x.Adress != "Железнодорожный" &&
+            x.Adress != "Ленинский" &&
+            x.Adress != "Октябрьский" &&
+            x.Adress != "Первомайский"));
+            objList = objList.OrderByDescending(x => x.CreationTime);
             return View(objList);
         }
 
@@ -29,7 +51,11 @@ namespace HouseReview.Controllers
         {
             _db.Comments.Add(obj);
             _db.SaveChanges();
-            return RedirectToAction("Comment");
+           if (obj.Adress == "Пролетарский" || obj.Adress == "Кировский" || obj.Adress == "Советский" || obj.Adress == "Ворошиловский" ||
+                obj.Adress == "Железнодорожный" || obj.Adress == "Ленинский" || obj.Adress == "Октябрьский" || obj.Adress == "Первомайский")
+                return RedirectToAction("CommentRegions");
+           else
+                return RedirectToAction("CommentHouses");
         }
 
         public IActionResult House()
@@ -47,11 +73,13 @@ namespace HouseReview.Controllers
             if (Adress != null)
             {
                 IEnumerable<Comment> objList = _db.Comments.Where(x => (x.Adress.Contains(Adress)));
+                objList = objList.OrderByDescending(x => x.CreationTime);
                 return View(objList);
             }
             else
             {
                 IEnumerable<Comment> objList = _db.Comments.Where(x => (x.Adress == Adress));
+                objList = objList.OrderByDescending(x => x.CreationTime);
                 return View(objList);
             }
         }
