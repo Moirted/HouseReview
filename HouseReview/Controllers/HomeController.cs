@@ -148,7 +148,7 @@ namespace HouseReview.Controllers
                     res += sp;
                 }
                 else res += arr[i];
-                if (i != adr.Length - 1)
+                if (i != arr.Length - 1)
                 {
                     res += kom;
                 }

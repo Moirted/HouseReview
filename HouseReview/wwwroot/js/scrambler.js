@@ -52,11 +52,10 @@ class TextScramble {
 	}
 }
 const phrases = [
-	'Отзывы',
-	'Доп. информация',
-	'Поиск на Авито', 
-	'Поиск на Domofond',
-	'Выписка из ЕГРН',
+	'Отзывы на здания',
+	'Отзывы на районы',
+	'Поиск в Яндексе', 
+	'Кадастр. информация',
 ]
 const el = document.querySelector('.scramble-text')
 const fx = new TextScramble(el)
